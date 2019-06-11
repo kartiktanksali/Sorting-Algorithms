@@ -7,6 +7,7 @@ Created on Wed Jun  5 20:40:53 2019
 """
 
 #Bubble Sort
+import time
 
 def bubbleSort(lst):
     
@@ -19,11 +20,13 @@ def bubbleSort(lst):
                 lst[j+1] = lst[j]
                 lst[j] = temp
                 flag = True
-        if flag == False:
+        if flag == True:
             return lst
 
     return lst
     
-lst = [5,6,2,1,3,7,2,4]
+lst = [1,2,3,4,5,7,6]
+start_time = time.time()
 res = bubbleSort(lst)
+print("--- %s seconds ---" % (time.time() - start_time))
 print(res)
